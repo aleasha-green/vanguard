@@ -30,7 +30,7 @@
 
     <main>
         
-        <section id="about">
+        <div id="about">
             <section id="innovation">
                 <h2>Innovation & Investment</h2>
                 <p>We empower businesses to lead the future with high-impact strategies, market intelligence, and financial solutions that drive success.</p>
@@ -41,12 +41,12 @@
                 <h2>Our Expertise. Your Edge.</h2>
                 <p>We redefine success by leveraging AI-driven analytics, market intelligence, and high-yield investment strategies to propel businesses forward. Whether you're looking to scale, optimize, or dominate, our strategic expertise delivers results.</p>
             </section>
-        </section>
+        </div>
 
         <section id="services">
             <h2>What We Offer</h2>
 
-            <section id="services-container">
+            <div id="services-container">
                 <section>
                     <h3>Strategic Growth Consulting</h3>
                     <p>Unlock new revenue streams and optimize market expansion strategies.</p>
@@ -76,16 +76,16 @@
                     <h3>Corporate Innovation</h3>
                     <p>Strategic implementation of new ideas, technologies, and processes to drive business growth, enhance competitive advantage, and adapt to evolving market demands.</p>
                 </section>
-            </section>
+            </div>
         </section>
 
-        <section id="results">
+        <div id="results">
             <section>
                 <h2>Proven Results</h2>
                 <p>Our data-driven strategies have delivered outstanding ROI, leading to significant revenue growth.</p>
             </section>
 
-            <section class="results-container">
+            <div class="results-container">
                 <section class="results-table">
                     <h3>Profits</h3>
                     <table>
@@ -133,28 +133,28 @@
                         <div class="bar" data-year="2024" style="--height: 100%;"></div>
                     </div>
                 </section>
-            </section>
-        </section>
+            </div>
+        </div>
 
         <section id="contact">
             <h2>Contact Us</h2>
             <p>Want to take your business to the next level? Get in touch with our elite team today.</p>
 
-            <form action="" method="POST">
-                <label for="">Full Name</label>
-                <input type="text" id="" name="">
+            <form action="contact-form-handler.php" method="POST">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name">
 
-                <label for="">Email Address</label>
-                <input type="text" id="" name="">
+                <label for="email">Email Address</label>
+                <input type="text" id="email" name="email">
 
-                <label for="">Company Name</label>
-                <input type="text" id="" name="">
+                <label for="company">Company Name</label>
+                <input type="text" id="company" name="company">
 
-                <label for="">Industry</label>
-                <input type="text" id="" name="">
+                <label for="industry">Industry</label>
+                <input type="text" id="industry" name="industry">
 
-                <label for="">How can we help you?</label>
-                <textarea id="" name=""></textarea>
+                <label for="comment">How can we help you?</label>
+                <textarea id="comment" name="comment"></textarea>
 
                 <input type="submit" value="Submit">
             </form>
