@@ -89,14 +89,15 @@ body {
 }
 
 /* ADD FLOATING SVG LOGO BEFORE THE H1 */
- {
+h1::before {
     content: "";
-
-    left:-.5rem;
+    /**/
+    position: absolute;
+    /**/
+    left: -0.5rem;
     width: 3.75rem;
     height: 3.75rem;
-    background: url('images/vanguard-logo.svg') no-repeat center/contain;
-
+    background: url('images/vanguard-logo.svg') no-repeat center / contain;
 }
 /* THIS ONE IS DONE FOR YOU */
 #bar-chart {
@@ -117,7 +118,7 @@ body {
     background: var(--charcoal);
     border-radius: 10px;
     position: relative;
-    transition: ;
+    transition: height 0.3s ease;
     height: 0;
 }
 /* THIS ONE IS DONE FOR YOU */
@@ -145,21 +146,64 @@ body {
 }
 
 
-/* MEDIA QUERIES (MEDIUM) */ 
 
-    #results {
+/* STYLES ADDED BY ALEASHA */
+h1 {
+    color: var(--blue);
+    font-size: 2rem;
+    font-weight: 700;
+}
+#results {
+    background-color: var(--blue);
+}
+header, nav, #contact, footer {
+    background-color: var(--black);
+}
+body {
+    color: var(--white);
+    font-family: 'Inter', Arial, sans-serif;
+}
+#expertise, #services h2 {
+    color: var(--black);
+}
+#services-container > section {
+    background-color: var(--blue);
+    border-radius: 5px;
+    padding: 1rem;
+}
+#services-container > section h3 {
+    padding: 0.5rem;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+#innovation {
+    align-content: center;
+}
+
+
+/* MEDIA QUERIES (MEDIUM) */ 
+@media (min-width: 800px) {
+    #results, #services-container {
+        display: grid;
         grid-template-columns: 1fr 1fr;
     }
+    #results > section:first-child {
+        grid-column: 1 / -1;
+    }
     .results-container {
+        display: flex;
         flex-direction: row;
         justify-content: space-between;
     }
     .results-table {
         width: 50%;
     }
-    .bar-chart {
+    #bar-chart {
         width: 50%;
     }
-
+}
 
 /* MEDIA QUERIES (LARGE) */
+@media (min-width: 1024px) {
+
+}
