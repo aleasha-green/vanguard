@@ -68,6 +68,8 @@ table {
 /* MIN-WIDTH OF THE PAGE SHOULD NOT GO BELOW 400PX */
 body {
     min-width: 400px;
+    color: var(--white);
+    font-family: 'Inter', Arial, sans-serif;
 }
 
 /* ADD A DIV WITH THE CLASS OF CONTAINER TO EVERY CONTENT CONTAINER THIS IS ALLOW THE BASE ELEMENTS TO BE 100% WIDTH, BUT CONSTRAIN THE ACTUAL CONTENT TO 90% */
@@ -146,20 +148,29 @@ h1::before {
 }
 
 /* STYLES ADDED BY ALEASHA */
+header, nav, #contact, footer {
+    background-color: var(--black);
+}
 h1 {
     color: var(--blue);
     font-size: 2rem;
     font-weight: 700;
 }
-#results {
+h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding-bottom: 1rem;
+}
+#innovation {
+    align-content: center;
+}
+#innovation a {
     background-color: var(--blue);
-}
-header, nav, #contact, footer {
-    background-color: var(--black);
-}
-body {
+    text-decoration: none;
     color: var(--white);
-    font-family: 'Inter', Arial, sans-serif;
+    padding: 1rem;
+    border-radius: 5px;
+    margin-top: 1rem;
 }
 #expertise, #services h2 {
     color: var(--black);
@@ -168,14 +179,31 @@ body {
     background-color: var(--blue);
     border-radius: 5px;
     padding: 1rem;
+    margin: 0.5rem;
 }
 #services-container > section h3 {
     padding: 0.5rem;
     font-weight: 700;
     font-size: 1.2rem;
 }
-#innovation {
-    align-content: center;
+#results {
+    background-color: var(--blue);
+}
+form input, form textarea {
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+}
+form > input {
+    background-color: var(--blue);
+    border-radius: 5px;
+    color: var(--white);
+    font-weight: 700;
+}
+footer {
+    text-align: center;
+    padding: 2rem;
+    line-height: 1.5rem;
 }
 
 /* MEDIA QUERIES (MEDIUM) */ 
@@ -202,5 +230,14 @@ body {
 
 /* MEDIA QUERIES (LARGE) */
 @media (min-width: 1024px) {
+    #services-container {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    
 
 }
